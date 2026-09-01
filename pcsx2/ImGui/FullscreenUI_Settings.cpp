@@ -2638,6 +2638,13 @@ void FullscreenUI::DrawEmulationSettingsPage()
 		FSUI_NSTR("130% Speed"),
 		FSUI_NSTR("180% Speed"),
 		FSUI_NSTR("300% Speed"),
+        FSUI_NSTR("400% Speed"),
+        FSUI_NSTR("500% Speed"),
+        FSUI_NSTR("600% Speed"),
+        FSUI_NSTR("700% Speed"),
+        FSUI_NSTR("800% Speed"),
+        FSUI_NSTR("900% Speed"),
+	    FSUI_NSTR("1000% Speed"),
 	};
 	static constexpr const char* ee_cycle_skip_settings[] = {
 		FSUI_NSTR("Normal (Default)"),
@@ -2650,6 +2657,8 @@ void FullscreenUI::DrawEmulationSettingsPage()
 		FSUI_NSTR("1 Frame"),
 		FSUI_NSTR("2 Frames"),
 		FSUI_NSTR("3 Frames"),
+        FSUI_NSTR("4 Frames"),
+	    FSUI_NSTR("5 Frames"),
 	};
 	// RtcYear is stored as years after 2000, generate labels so the UI shows calendar years.
 	static const char* rtc_year_options[100];
