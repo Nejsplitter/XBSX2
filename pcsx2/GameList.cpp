@@ -422,9 +422,9 @@ bool GameList::GetIsoListEntry(const std::string& path, GameList::Entry* entry)
 
 	if (const GameDatabaseSchema::GameEntry* db_entry = GameDatabase::findGame(entry->serial))
 	{
-		entry->title = std::move(db_entry->name);
+		entry->title = Path::GetFileTitle(path);
 		entry->title_sort = std::move(db_entry->name_sort);
-		entry->title_en = std::move(db_entry->name_en);
+		entry->title_en = Path::GetFileTitle(path);
 		entry->compatibility_rating = db_entry->compat;
 		entry->region = ParseDatabaseRegion(db_entry->region);
 	}
